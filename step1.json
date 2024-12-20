@@ -1,0 +1,19 @@
+{
+    "title": "Self-Reflection and Preparation",
+    "icon": "fas fa-search-plus",
+    "description": "Gain clarity about your career goals, strengths, and values.",
+    "resources": [
+        {
+            "name": "StrengthsFinder Assessment",
+            "description": "Discover your top 5 strengths and how to leverage them in your career",
+            "link": "#",
+            "linkText": "Access Tool"
+        },
+        {
+            "name": "Personal Pitch Template",
+            "description": "Guide for crafting your elevator pitch",
+            "link": "#",
+            "linkText": "Download"
+        }
+    ]
+}

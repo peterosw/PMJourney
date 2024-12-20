@@ -1,0 +1,13 @@
+{
+    "title": "Step Title",
+    "icon": "fas fa-icon-name",
+    "description": "Step description goes here.",
+    "resources": [
+        {
+            "name": "Resource Name",
+            "description": "Resource description",
+            "link": "#",
+            "linkText": "View/Download"
+        }
+    ]
+}
