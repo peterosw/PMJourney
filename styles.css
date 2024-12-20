@@ -44,7 +44,8 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -52,6 +53,7 @@ body {
     color: #666;
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 0.9rem;
 }
 
 .nav-links a:hover {
@@ -67,7 +69,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
@@ -77,35 +79,6 @@ body {
     margin-bottom: 2rem;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn-primary {
-    background: #e74c3c;
-    color: white;
-}
-
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid white;
-}
-
 /* Sections */
 .section {
     padding: 80px 0;
@@ -113,87 +86,84 @@ body {
 
 .section h2 {
     font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin-bottom: 1rem;
     color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .section h2 i {
-    margin-right: 10px;
     color: #3498db;
+}
+
+.step-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .bg-light {
     background: #f8f9fa;
 }
 
-/* Resource Grid */
-.resource-grid, .ref-grid, .self-management-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
     margin-top: 2rem;
-}
-
-.resource-card, .ref-card, .management-card {
     background: white;
-    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.resource-card h3, .ref-card h3, .management-card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    background: white;
 }
 
-.resource-list, .tips-list, .wellness-list, .job-search-list {
-    list-style: none;
+.resource-table th,
+.resource-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
 }
 
-.resource-list li, .tips-list li, .wellness-list li, .job-search-list li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-}
-
-.resource-list i {
-    margin-right: 10px;
-    color: #3498db;
-}
-
-/* Framework Styles */
-.framework {
-    margin-bottom: 1.5rem;
-}
-
-.framework h4 {
-    color: #3498db;
-    margin-bottom: 0.5rem;
-}
-
-/* Glossary */
-.glossary dt {
-    color: #3498db;
+.resource-table th {
+    background: #f8f9fa;
     font-weight: 600;
-    margin-top: 1rem;
+    color: #2c3e50;
 }
 
-.glossary dd {
-    margin-left: 1rem;
-    color: #666;
+.resource-table tr:hover {
+    background: #f8f9fa;
 }
 
-/* Checklist */
-.checklist label {
-    display: block;
-    margin-bottom: 0.8rem;
-    cursor: pointer;
+.resource-table td:first-child {
+    font-weight: 500;
+    color: #2c3e50;
 }
 
-.checklist input[type="checkbox"] {
-    margin-right: 10px;
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.resource-link:hover {
+    color: #2c3e50;
+    background: rgba(52, 152, 219, 0.2);
 }
 
 /* Contact Section */
@@ -216,10 +186,14 @@ body {
     color: #3498db;
     font-weight: 500;
     transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: rgba(52, 152, 219, 0.1);
 }
 
 .contact-link:hover {
     color: #2c3e50;
+    background: rgba(52, 152, 219, 0.2);
 }
 
 /* Footer */
@@ -244,16 +218,23 @@ footer {
         font-size: 1rem;
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .section {
         padding: 40px 0;
     }
     
-    .resource-grid, .ref-grid, .self-management-grid {
-        grid-template-columns: 1fr;
+    .section h2 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .table-container {
+        margin: 1rem -20px;
+        border-radius: 0;
+    }
+    
+    .resource-table th,
+    .resource-table td {
+        padding: 0.75rem;
     }
 }
